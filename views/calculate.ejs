@@ -1,0 +1,112 @@
+
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card shadow-sm mb-4" style="background: #f8fff8;">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-success text-center mb-3">Typical Emission Factors</h5>
+          <ul class="list-unstyled ms-2">
+            <li class="mb-2"><b>Transportation</b>
+              <ul>
+                <li> Petrol/Diesel Car: <span class="text-success">~0.2 kg CO₂/km</span></li>
+                <li> Bus: <span class="text-success">~0.1 kg CO₂/km/passenger</span></li>
+                <li> Train: <span class="text-success">~0.04 kg CO₂/km/passenger</span></li>
+                <li> Airplane: <span class="text-success">~0.25 kg CO₂/km/passenger</span></li>
+              </ul>
+            </li>
+            <li class="mb-2"><b>Energy</b>
+              <ul>
+                <li> Electricity: <span class="text-success">~0.9 kg CO₂/kWh</span></li>
+                <li> LPG cylinder (14.2 kg): <span class="text-success">~41 kg CO₂/cylinder</span></li>
+              </ul>
+            </li>
+            <li class="mb-2"><b>Food</b>
+              <ul>
+                <li> Vegetarian diet: <span class="text-success">~1.7 tonnes CO₂/year</span></li>
+                <li> Non-vegetarian: <span class="text-success">~2.5 tonnes CO₂/year</span></li>
+                <li> Vegan: <span class="text-success">~1.5 tonnes CO₂/year</span></li>
+              </ul>
+            </li>
+            <li class="mb-2"><b>Waste</b>
+              <ul>
+                <li> General waste (non-recycled): <span class="text-success">~0.45 kg CO₂/kg</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   <form method="post" action="/calculate" class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-7"> <!-- reduces width -->
+      
+      <!-- Transportation -->
+      <h2 class="fw-bold text-success">Calculate Your Transportation Footprint</h2>
+      <div class="mb-3">
+        <label for="VehicleType" class="form-label">VehicleType</label>
+        <select class="form-select" id="VehicleType" name="vehicleType" required>
+          <option value="car">Car</option>
+          <option value="bike">Bike</option>
+          <option value="bus">Bus</option>
+          <option value="train">Train</option>
+          <option value="plane">Plane</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="distance" class="form-label">Distance Travelled (km per week)</label>
+        <input type="number" placeholder="eg - 100 km/week" class="form-control" id="distance" name="distance" required>
+    
+      </div>
+
+      <!-- Energy -->
+      <h4>Home Energy</h4>
+      <div class="mb-3">
+        <label for="electricity" class="form-label">Electricity Usage (kWh per month)</label>
+        <input type="number"  placeholder="eg - 150 kWh/month" class="form-control" id="electricity" name="electricity" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="cookingFuel" class="form-label">Cooking Fuel (LPG cylinders per month)</label>
+        <input type="number"  class="form-control" id="cookingFuel" name="cookingFuel">
+      </div>
+
+      <!-- Food -->
+      <h4>Diet</h4>
+      <div class="mb-3">
+        <label for="dietType" class="form-label">Diet Type</label>
+        <select class="form-select" id="dietType" name="dietType">
+          <option value="veg">Vegetarian</option>
+          <option value="nonveg">Non-Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="mixed">Mixed</option>
+        </select>
+      </div>
+
+      <!-- Waste -->
+     <!-- Waste & Recycling Section -->
+<h4 class="fw-bold text-success mt-4">Waste & Recycling</h4>
+<div class="mb-3">
+  <label for="waste" class="form-label">Household Waste <span class="text-secondary">(kg per week)</span></label>
+  <input type="number" placeholder="e.g. 10 kg/week" class="form-control" id="waste" name="waste" min="0" step="1" required>
+  <div class="valid-feedback">Perfect</div>
+  <div class="invalid-feedback">Please enter the details</div>
+</div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="recycle" name="recycle" value="yes">
+        <label class="form-check-label" for="recycle">I recycle regularly</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-success w-100">Calculate My Footprint</button>
+
+    </div>
+  </div>
+</form>
+
+

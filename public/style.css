@@ -1,0 +1,128 @@
+/* body {
+  font-family: 'Poppins', sans-serif; /* or Arial, Roboto, etc. 
+}
+ 
+
+.navbar {
+  margin-top: 3px; 
+  /* border-radius: 12px; 
+}
+.navbar .btn-outline-light {
+  
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: white;
+  color: #000302 !important; /* Bootstrap's green 
+}
+
+.h2, .h6 {
+    text-align: center;
+}
+
+.objective {
+  transition: all 0.4s ease-in-out;
+}
+.objective:hover {
+  color: #2e7d32;
+  transform: scale(1.02);
+}
+
+.objective b {
+    transition: background-color 0.4s ease;
+}
+
+.objective:hover b{
+    transition-delay: 0.5s;
+    background-color: yellow;
+}
+.footer{
+    cursor: pointer;
+}
+.objective p-3{
+  background-color: #f2ecec;       
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border-radius: 12px;             
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  margin: 15px;                    
+  padding: 20px;                   
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px rgb(128, 127, 127);
+}
+
+
+.objective:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+  background-color: #f9f9f9; 
+} */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+ 
+}
+
+.navbar .nav-item .nav-link.btn:hover {
+  color: #000000 !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Custom hover style for hero section images */
+.hero-section img.card:hover {
+  box-shadow: 0 8px 24px rgba(30, 138, 30, 0.25);
+  border: 2px solid #2e7d32;
+  transform: scale(1.05);
+  transition: box-shadow 0.3s, border 0.3s, transform 0.3s;
+}
+
+
+/* About Carbon Footprint card */
+.objective {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar .nav-item .nav-link.btn:hover
+{
+  color: rgba(0, 0, 0, 0.1);
+
+}
+.objective:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  color: black;
+}
+
+/* Custom card hover */
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+.hero-section.container,
+.container.my-5 {
+  padding-left: 5px !important;  
+  padding-right: 5px !important;
+}
+.card-hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 15px 30px rgba(3, 223, 36, 0.537);  
+}
+
+/* Optional: make card buttons full width */
+.card-hover .btn {
+  width: 100%;
+}

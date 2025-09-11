@@ -1,0 +1,29 @@
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center p-4 bg-light rounded shadow">
+
+      <h2 class="fw-bold text-success mb-3">Your Carbon Footprint</h2>
+      
+      <p class="fs-4">
+        Your annual carbon footprint is approximately: 
+        <b><%= footprint %> kg CO₂e</b>
+      </p>
+
+    <p>✈️ Fun Fact: Your annual carbon footprint (~<%= (footprint/1000).toFixed(2) %> tons CO₂e) is roughly equivalent to:</p>
+
+<% if (footprint/1000 < 1) { %>
+  <p>1 short domestic flight per year!</p>
+<% } else if (footprint/1000 < 3) { %>
+  <p>2–3 short flights or 1 long-haul flight per year!</p>
+<% } else if (footprint/1000 < 6) { %>
+  <p>4–5 long-haul flights per year!</p>
+<% } else { %>
+  <p>More than 6 long-haul flights per year! (A NYC → London round-trip emits roughly 1–1.5 tons CO₂ per passenger.) </p>
+<% } %>
+
+
+      <a href="CFC/calculate" class="btn btn-success mt-4">Calculate Again</a>
+    </div>
+  </div>
+</div>
