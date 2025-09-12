@@ -5,6 +5,7 @@ const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(expressLayouts);
@@ -13,6 +14,7 @@ app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.set("layout", "layouts/boilerplate");
+
 
 app.get("/CFC", (req, res) => {
   res.render("index");
