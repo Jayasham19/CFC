@@ -53,10 +53,62 @@
 }</style>
       </div>
     </div>
-      <div class="col-md-5">
-  <!-- Spline 3D Viewer -->
-  </div>
+     
+  
+    
+ <!-- <div class="emission-box text-center p-3 shadow rounded">
+  <h5 class="fw-bold text-success"> Real-time Carbon Monoxide</h5>
+  <p id="emissionCounter" class="fs-4 text-dark">Loading...</p>
+  <small class="text-muted">Location: Benagaluru, India</small>
 </div>
+
+<script>
+async function loadEmissionData() {
+  try {
+    let response = await fetch(
+      "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=12.97&longitude=77.59&hourly=carbon_monoxide"
+    );
+    let data = await response.json();
+    console.log("API response:", data);
+
+    // Take the latest CO value (last item from array)
+    let coValues = data.hourly.carbon_monoxide;
+    let timeValues = data.hourly.time;
+    let latestIndex = coValues.length - 1;
+
+    let latestCO = coValues[latestIndex];
+    let latestTime = timeValues[latestIndex];
+
+    // Update the DOM
+    document.getElementById("emissionCounter").innerText =
+      latestCO.toFixed(2) + " μg/m³ (CO)";
+  } catch (err) {
+    console.error("Error fetching API:", err);
+    document.getElementById("emissionCounter").innerText =
+      "⚠️ Failed to load data";
+  }
+}
+
+// Call function when page loads
+loadEmissionData();
+</script> -->
+<div class="col-md-6 d-flex justify-content-center align-items-center">
+  <video 
+    src="./Pic/Video.mp4" 
+    width="550" 
+    height="400" 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    style="opacity: 0.7; border-radius: 10px;"
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+ 
+
 </section>
 
 
