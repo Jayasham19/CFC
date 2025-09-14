@@ -64,11 +64,11 @@ app.get("/learn", (req, res) => {
   res.render("learn");
 });
 
-// Run locally only
 if (require.main === module) {
   app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/CFC`);
   });
+} else {
+  // For Vercel serverless
+  module.exports.handler = serverless(app);
 }
-
-module.exports.handler = serverless(app);
